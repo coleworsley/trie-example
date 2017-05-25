@@ -1,16 +1,87 @@
-$white: #FFF;
-$success: #09c476;
+$body: #FFF;
+$words: #4A4E69;
+$highlight-text: #222C3A;
+$highlight-body: rgba(34, 43, 57, .3);
 
 body {
-  background-color: $success;
+  background-color: $body;
 }
 
 h1 {
-  margin: {
-    left: 50px;
-  }
-  color: $white;
+  margin: 0 auto 50px;
+  text-align: center;
+  color: $words;
   font-family: 'Avenir Next', sans-serif;
-  font-size: 100px;
   font-weight: 400;
+  font-size: 100px;
+}
+
+ul,
+.input-container {
+  position: relative;
+  display: block;
+  max-width: 700px;
+  margin: 0 auto 20px;
+}
+
+ul {
+  color: $words;
+  font-size: 40px;
+  list-style: none;
+  padding: 10px;
+  width: 68%;
+}
+
+.input-container {
+  width: 70%;
+}
+
+li {
+  cursor: pointer;
+  padding: 5px;
+}
+
+li:hover {
+  background-color: $highlight-body;
+  color: $highlight-text;
+}
+
+li:active {
+  background-color: rgba(34, 43, 57, .8);
+  color: white;
+}
+
+.input-container {
+  height: 100px;
+}
+
+input {
+  padding: 10px;
+  font-size: 50px;
+  color: $words;
+}
+
+input::-webkit-input-placeholder {
+  color: $highlight-body;
+}
+
+#main {
+  position: absolute;
+  z-index: 2;
+  background: transparent;
+  width: 100%;
+}
+
+#placeholder-input {
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+  color: $highlight-body;
+}
+
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration {
+  display: none;
 }

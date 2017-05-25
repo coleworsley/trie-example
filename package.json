@@ -8,12 +8,15 @@
       "env"
     ],
     "plugins": [
-      ["transform-runtime", {
-        "helpers": false,
-        "polyfill": false,
-        "regenerator": true,
-        "moduleName": "babel-runtime"
-      }]
+      [
+        "transform-runtime",
+        {
+          "helpers": false,
+          "polyfill": false,
+          "regenerator": true,
+          "moduleName": "babel-runtime"
+        }
+      ]
     ]
   },
   "scripts": {
@@ -42,5 +45,9 @@
     "style-loader": "^0.17.0",
     "webpack": "^2.4.1",
     "webpack-dev-server": "^2.4.5"
+  },
+  "dependencies": {
+    "@coleworsley/complete-me": "0.0.4",
+    "@coleworsley/sorting-suite": "0.0.2"
   }
 }
